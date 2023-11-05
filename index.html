@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/codoacodo.png" type="image/x-icon">
+    <title>Comprar tickets Conferencia Bs As | Codo a codo 4.0</title>
+</head>
+
+<body>
+
+          <section class="cards-Tickets-Container" id="tickets">
+            <div class="cards tickets">
+
+                <div class="ticket student">
+                    <h3 class="card__text--title ">Estudiante</h3>
+                        <p>Tienen un descuento</p>
+                        <p><strong>80%</strong></p>
+                        <p>*presentar documentación</p>
+                </div>
+                <div class="ticket trainee">
+                    <h3 class="card__text--title ">Trainee</h3>
+                        <p>Tienen un descuento</p>
+                        <p><strong>50%</strong></p>
+                        <p>*presentar documentación</p>
+                </div>
+                <div class="ticket junior">
+                    <h3 class="card__text--title ">Junior</h3>
+                        <p>Tienen un descuento</p>
+                        <p><strong>15%</strong></p>
+                        <p>*presentar documentación</p>
+                </div>
+            </div>
+            
+            <div class="formTickets-Container">
+                <p>VENTA</p>
+                <H3>VALOR DE TICKET: $200</H3>
+                <form action="" class="form-Tickets" id="formTickets">
+                    <div class="form-Tickets-Names">
+                        <div>
+                            <label for="name"></label>
+                            <input type="text" placeholder="Nombre" class="input-Tickets" id="name" >
+                        </div>
+                        <div>
+                            <label for="lastName"></label>
+                            <input type="text" placeholder="Apellido" class="input-Tickets" id="lastName">
+                        </div>
+                    </div>
+
+                    <div class="form-Tickets-Email">
+                        <label for="email"></label>
+                        <input type="text" placeholder="Correo electrónico" class="input-Tickets" id="email">
+                    </div>
+
+                    <div class="form-Tickets-Category">
+                        <div>
+                            <label for="quantity" class="quantity">Cantidad</label>
+                            <input type="text" placeholder="Cantidad" class="input-Tickets" id="quantity">
+                            <span id="messageError" class="messageErrorDisabled"></span>
+                        </div>
+                        <div class="category">
+                            <label for="category">Categoria</label>
+                            <select name="" id="category">
+                                <option value="0" selected></option>
+                                <option value="1">Estudiante</option>
+                                <option value="2">Trainee</option>
+                                <option value="3">Junior</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-Payment">
+                        <span>Total a pagar: $ </span>
+                        <span id="payment">0</span>
+                    </div>
+
+                    <div class="form-btns">
+                        <button type="reset" id="reset">Borrar</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="btn-Resumen">
+                            Resumen
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Verifique los datos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <p>Nombre Completo: </p><span></span>
+                        <p>Correo: </p><span></span>
+                        <p>Cantidad de tickets: </p><span></span>
+                        <p>Descuento aplicado: </p><span></span>
+                        <p>Total a pagar: </p><span></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                        <button type="button" class="btn btn-success" id="btn-Success">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
